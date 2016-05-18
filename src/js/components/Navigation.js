@@ -10,6 +10,15 @@ var Navigation = React.createClass({
             <Link to="/">Home</Link>
           </li>
           <li>
+            <Link to="/order">Order</Link>
+          </li>
+          <li>
+            <Link to="/choose">Choose</Link>
+          </li>
+          <li>
+            <Link to="/custom">Custom</Link>
+          </li>
+          <li>
             <Link to="/about">About Us</Link>
           </li>
           <li>

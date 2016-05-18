@@ -5,3 +5,32 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
+
+/* navigation */
+.main-menu {
+
+}
+.main-menu ul {
+  list-style: none;
+  padding:0;
+}
+.main-menu ul li {
+  display: inline-block;
+  margin-right:18px;
+}
+.main-menu ul li a {
+  color:black;
+  font-size:18px;
+}
+
+/* order page */
+
+
+/* choose */
+.choose-toppings label {
+  display: inline-block;
+}
+.choose-toppings img {
+  display: inline-block;
+  width:70px;
+}

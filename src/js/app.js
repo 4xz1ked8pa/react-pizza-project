@@ -10,15 +10,32 @@ var browserHistory = ReactRouter.browserHistory;
 var App = require('./components/App.js');
 var Home = require('./components/Home.js');
 var About = require('./components/About.js');
+var Order = require('./components/Order.js');
 var Team = require('./components/Team.js');
 var NotFound = require('./components/NotFound.js');
 var Navigation = require('./components/Navigation.js');
+var Choose = require('./components/Choose.js');
+var Custom = require('./components/Custom.js');
 
-/
+/* The routes. This section says:
+  - If the route starts with /, load the App component
+  - If the route IS /, load the Home component INSIDE App as this.props.children
+  - If the route is /about, load the About component INSIDE App as this.props.children
+  - If the route is /team, load the Team component INSIDE App as this.props.children
+  - If the route is /about, load the About component INSIDE App as this.props.children
+  - If the route is anything else, load the NotFound component INSIDE App as this.props.children
+
+The whole process lets us create **complex, nested user interfaces** with minimal effort,
+by simply nesting `Route` components. */
+
 var routes = (
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Home}/>
+      <Route path="order" component={Order}/>
+      <Route path="choose" component={Choose} />
+      <Route path="custom" component={Custom}/>
+      <Route path="order" component={Order}/>
       <Route path="about" component={About}/>
       <Route path="team" component={Team}/>
       <Route path="*" component={NotFound}/>
